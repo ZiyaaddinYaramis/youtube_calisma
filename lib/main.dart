@@ -16,7 +16,7 @@ class Uygulamam extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: "Nunito"),
       home: Scaffold(
-        backgroundColor: const Color.fromARGB(221, 228, 183, 183),
+        backgroundColor: const Color.fromARGB(221, 241, 239, 239),
         appBar: AppBar(
           title: Text('Uygulamam',
               style:
@@ -24,15 +24,20 @@ class Uygulamam extends StatelessWidget {
           backgroundColor: Colors.indigo.shade200,
           centerTitle: true,
         ),
-        body: Column(
-          children: [
-            // Image.asset("assets/images/logo.png"),
-            Text("merhaba"),
-            Text("merhaba Dunya"),
-
-            // Image.network(
-            //     "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"), // İnternetten resim çekme
-          ],
+        body: Center(
+          child: Column(
+            children: [
+              Image.asset('assets/images/resim.jpg', width: 200, height: 200),
+              Text("merhaba"),
+              Image.asset('assets/images/logo.png', width: 200, height: 200),
+              Text("merhaba Dunya"),
+              Image.network(
+                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
+                width: 200,
+                height: 200,
+              ),
+            ],
+          ),
         ),
       ),
     );
