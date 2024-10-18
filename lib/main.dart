@@ -16,7 +16,7 @@ class Uygulamam extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: "Nunito"),
       home: Scaffold(
-        backgroundColor: Colors.black87,
+        backgroundColor: const Color.fromARGB(221, 228, 183, 183),
         appBar: AppBar(
           title: Text('Uygulamam',
               style:
@@ -24,7 +24,16 @@ class Uygulamam extends StatelessWidget {
           backgroundColor: Colors.indigo.shade200,
           centerTitle: true,
         ),
-        body: Image.asset('assets/images/logo.png'),
+        body: Column(
+          children: [
+            // Image.asset("assets/images/logo.png"),
+            Text("merhaba"),
+            Text("merhaba Dunya"),
+
+            // Image.network(
+            //     "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"), // İnternetten resim çekme
+          ],
+        ),
       ),
     );
   }

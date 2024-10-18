@@ -2,17 +2,26 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // Ek bir Maven deposu gerekirse aşağıdaki satırı ekleyebilirsin
+        // maven { url "https://jitpack.io" }
     }
 }
 
 rootProject.buildDir = "../build"
+
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// Temizlik görevini yapılandırma
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
+
+// Ek olarak compileSdkVersion ve targetSdkVersion ayarlarının projenle uyumlu olduğundan emin ol.
+// Bu ayarlar genellikle "android/build.gradle" dosyasında bulunur.
+
