@@ -27,10 +27,12 @@ class Uygulamam extends StatelessWidget {
           body: Center(
             child: Column(
               //Diger bir kullanım şekli Row() ile yatayda sıralama yapabiliriz.
+
               mainAxisAlignment: MainAxisAlignment.start, // Dikeyde ortalama
               crossAxisAlignment: CrossAxisAlignment.center, // Yatayda ortalama
               // .center, .start, .end, .spaceAround, .spaceBetween, .spaceEvenly
               // .start ile başlangıca, .end ile sona, .spaceAround ile etrafına, .spaceBetween ile aralarına, .spaceEvenly ile eşit aralıklara yerleştirme yapabiliriz.
+
               children: [
                 //Image.asset('assets/images/resim.jpg', width: 450, height: 450),
                 Text("merhaba"),
