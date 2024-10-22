@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // main() fonksiyonu uygulamanın başlangıç noktasıdır.
 void main() {
   runApp(
-      Uygulamam()); // runApp(Uygulamam()) fonksiyonu sabit görunumuzu başlatır.
+      const Uygulamam()); // runApp(Uygulamam()) fonksiyonu sabit görunumuzu başlatır.
 }
 
 // StatelessWidget sınıfindan türetilen Uygulamam sınıfı oluşturuldu.
@@ -22,7 +22,7 @@ class Uygulamam extends StatelessWidget {
 //####################### APPBAR ###########################
 //##########################################################
           appBar: AppBar(
-            title: Text('Uygulamam',
+            title: const Text('Uygulamam',
                 style: TextStyle(
                     fontWeight: FontWeight.w300, color: Colors.white)),
             backgroundColor: Colors.indigo.shade200,
@@ -43,13 +43,13 @@ class Uygulamam extends StatelessWidget {
 //##########################################################
               children: [
                 //Image.asset('assets/images/resim.jpg', width: 450, height: 450),
-                Text("merhaba"),
+                const Text("merhaba"),
                 //================================================================
-                SizedBox(
+                const SizedBox(
                     height:
                         20), // Araya boşluk ekler, Aslinda görunmez bir widget olusturur.
                 //================================================================
-                Text("MERHABA"),
+                const Text("MERHABA"),
                 //================================================================
                 Image.asset('assets/images/logo.png', width: 200, height: 200),
                 //================================================================
@@ -59,7 +59,7 @@ class Uygulamam extends StatelessWidget {
                   height: 200,
                 ),
                 //================================================================
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 //================================================================
                 ElevatedButton(
                     // Normal buton
@@ -67,22 +67,22 @@ class Uygulamam extends StatelessWidget {
                     onPressed: () => print('Butona tikladiniz'),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.indigo),
-                    child: Text('Eleveated Button',
+                    child: const Text('Eleveated Button',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.purple))),
                 //================================================================
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 //================================================================
                 TextButton(
                   onPressed: () {},
-                  child: Text('Text Button'),
+                  child: const Text('Text Button'),
                   // style: TextButton.styleFrom(
                   //     backgroundColor: Colors.lightBlueAccent),
                 ),
                 //================================================================
-                Icon(
+                const Icon(
                   Icons.arrow_forward_ios_rounded,
                   color: Colors.blue,
                   size: 50,
@@ -90,7 +90,7 @@ class Uygulamam extends StatelessWidget {
                 //================================================================
                 IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.blue,
                     size: 50,
