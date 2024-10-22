@@ -17,6 +17,10 @@ class Uygulamam extends StatelessWidget {
       theme: ThemeData(fontFamily: "Nunito"),
       home: Scaffold(
           backgroundColor: const Color.fromARGB(221, 241, 239, 239),
+
+//##########################################################
+//####################### APPBAR ###########################
+//##########################################################
           appBar: AppBar(
             title: Text('Uygulamam',
                 style: TextStyle(
@@ -24,29 +28,77 @@ class Uygulamam extends StatelessWidget {
             backgroundColor: Colors.indigo.shade200,
             centerTitle: true,
           ),
+
+//##########################################################
+//####################### BODY #############################
+//##########################################################
+
           body: Center(
             child: Column(
               //Diger bir kullanım şekli Row() ile yatayda sıralama yapabiliriz.
-
-              mainAxisAlignment: MainAxisAlignment.start, // Dikeyde ortalama
+              mainAxisAlignment: MainAxisAlignment.center, // Dikeyde ortalama
               crossAxisAlignment: CrossAxisAlignment.center, // Yatayda ortalama
               // .center, .start, .end, .spaceAround, .spaceBetween, .spaceEvenly
               // .start ile başlangıca, .end ile sona, .spaceAround ile etrafına, .spaceBetween ile aralarına, .spaceEvenly ile eşit aralıklara yerleştirme yapabiliriz.
-
+//##########################################################
               children: [
                 //Image.asset('assets/images/resim.jpg', width: 450, height: 450),
                 Text("merhaba"),
+                //================================================================
                 SizedBox(
                     height:
                         20), // Araya boşluk ekler, Aslinda görunmez bir widget olusturur.
+                //================================================================
                 Text("MERHABA"),
+                //================================================================
                 Image.asset('assets/images/logo.png', width: 200, height: 200),
+                //================================================================
                 Image.network(
                   'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
                   width: 200,
                   height: 200,
                 ),
+                //================================================================
+                SizedBox(height: 20),
+                //================================================================
+                ElevatedButton(
+                    // Normal buton
+
+                    onPressed: () => print('Butona tikladiniz'),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.indigo),
+                    child: Text('Eleveated Button',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.purple))),
+                //================================================================
+                SizedBox(height: 20),
+                //================================================================
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Text Button'),
+                  // style: TextButton.styleFrom(
+                  //     backgroundColor: Colors.lightBlueAccent),
+                ),
+                //================================================================
+                Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: Colors.blue,
+                  size: 50,
+                ),
+                //================================================================
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.blue,
+                    size: 50,
+                  ),
+                ),
+                //================================================================
               ],
+//##########################################################
             ),
           )),
     );
