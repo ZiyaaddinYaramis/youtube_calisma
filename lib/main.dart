@@ -63,7 +63,6 @@ class Uygulamam extends StatelessWidget {
                 //================================================================
                 ElevatedButton(
                     // Normal buton
-
                     onPressed: () => print('Butona tikladiniz'),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.indigo),
@@ -97,6 +96,52 @@ class Uygulamam extends StatelessWidget {
                   ),
                 ),
                 //================================================================
+                Container(
+                  width: 200,
+                  height: 200,
+                  //color: Colors.indigo.shade200, // BoxDecoration ile aynı işlevi görür yani BoxDecoration icindede ayni arguman var bu ikisi cakismamali. Bu yüzden kullanmaya gerek yok. BoxDecoration kullaniyorsan bunu kullanmayacaksin!  Aksi takdirde hata alırız.
+                  alignment:
+                      Alignment.center, //  "alignment" argumani hizalama yapar.
+                  decoration: BoxDecoration(
+                    //============= BorderRadius ================
+                    // "borderRadius" argumani köşeleri yuvarlar. köşe yarıçapı demektir.
+                    // Baslica BorderRadius türleri:
+                    // circular; yuvarlak köşe
+                    // only; sadece belirli köşeleri yuvarlar
+                    // vertical; sadece dikey köşeleri yuvarlar. Yani sadece y eksenindeki köşeleri yuvarlar
+                    // horizontal; sadece yatay köşeleri yuvarlar. Yani sadece x eksenindeki köşeleri yuvarlar
+                    // all; tüm köşeleri yuvarlar
+
+                    //===========================================
+                    borderRadius: BorderRadius.circular(20),
+                    //===========================================
+                    //borderRadius: BorderRadius.only(
+                    // topLeft: Radius.circular(20),
+                    // bottomRight: Radius.circular(20)),
+                    //===========================================
+                    //borderRadius:
+                    //     BorderRadius.vertical(top: Radius.circular(20)),
+
+                    //borderRadius:
+                    //     BorderRadius.vertical(bottom: Radius.circular(20)),
+                    //===========================================
+                    //borderRadius:
+                    //     BorderRadius.horizontal(left: Radius.circular(20)),
+
+                    //borderRadius:
+                    //     BorderRadius.horizontal(right: Radius.circular(20)),
+                    //===========================================
+                    //borderRadius: BorderRadius.all(Radius.circular(20)),
+                    //===========================================
+
+                    color: Colors.indigo.shade200,
+                  ),
+                  child: const Text('Ruwis',
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.white)),
+                ),
               ],
 //##########################################################
             ),
