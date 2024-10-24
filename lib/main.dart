@@ -122,7 +122,10 @@ class Uygulamam extends StatelessWidget {
                   height: 200,
                   //================================================================
                   // ! #################  Color  #################
-                  //color: Colors.indigo.shade200, // BoxDecoration ile aynı işlevi görür yani BoxDecoration icindede ayni arguman var bu ikisi cakismamali. Bu yüzden kullanmaya gerek yok. BoxDecoration kullaniyorsan bunu kullanmayacaksin!  Aksi takdirde hata alırız.
+                  //color: Colors.indigo.shade200, // BoxDecoration ile aynı işlevi görür yani
+                  //BoxDecoration icindede ayni arguman var bu ikisi cakismamali.
+                  //Bu yüzden kullanmaya gerek yok. BoxDecoration kullaniyorsan
+                  //bunu kullanmayacaksin!  Aksi takdirde hata alırız.
                   //================================================================
                   // İçerik hizalama - Alignment
                   alignment: Alignment.center,
@@ -248,7 +251,8 @@ class Uygulamam extends StatelessWidget {
 //##########################################################
 // BoxDecoration: Bir container (kutu) widget'ı için dekorasyon yapar (arka plan, kenarlık, köşeler, gölge vs.).
 // borderRadius: Container'ın köşelerini yuvarlar. (ör: BorderRadius.circular(20))
-// border: Container'ın kenarlarını çizer. Border.all() ile tüm kenarlara aynı genişlik ve renk, Border.symmetric() ile yatay ve dikey farklı ayarlar yapılabilir.
+// border: Container'ın kenarlarını çizer. Border.all() ile tüm kenarlara aynı genişlik ve 
+//renk, Border.symmetric() ile yatay ve dikey farklı ayarlar yapılabilir.
 // boxShadow: Container'ın gölgelendirmesini ayarlar (color, offset, blurRadius gibi parametrelerle).
 // image: Arkaplan resmi ekler. DecorationImage kullanılır.
 // gradient: Geçişli arkaplan rengi ekler. LinearGradient, RadialGradient, SweepGradient seçenekleri bulunur.
