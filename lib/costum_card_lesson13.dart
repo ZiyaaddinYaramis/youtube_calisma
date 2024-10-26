@@ -23,7 +23,7 @@ class CostumCardView extends StatelessWidget {
           ]),
       alignment: Alignment.center,
       child: const Text(
-        '13. Derste Flutter costom_card.dart Extract Widget ile olusturulan class kullanımı',
+        'Componet olusturma: 13. Derste Flutter costum_card_lesson13.dart Extract Widget ile olusturulan class kullanımı',
         style: TextStyle(fontSize: 11),
       ),
     );
