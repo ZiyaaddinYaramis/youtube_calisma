@@ -53,7 +53,6 @@ class ImageAdd extends StatelessWidget {
               style: TextButton.styleFrom(
                   backgroundColor: Colors.lightBlueAccent,
                   foregroundColor: Colors.white),
-
               child: const Text('Anasayfaya Dön'),
             )
           ],

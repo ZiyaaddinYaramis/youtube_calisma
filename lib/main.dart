@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_calisma/screens/home_screen.dart';
 
 void main() {
-  // main() fonksiyonu uygulamanın başlangıç noktasıdır.
-  runApp(
-      const Uygulamam()); // runApp(Uygulamam()) fonksiyonu uygulamayı başlatır.
+  runApp(const Uygulamam());
 }
 
 class Uygulamam extends StatelessWidget {
@@ -14,9 +12,8 @@ class Uygulamam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme:
-          ThemeData(fontFamily: "Nunito"), // Uygulama genelinde fontu ayarlar.
-      home: const HomeScreen(), // Uygulamanın başlangıç ekranı.
+      theme: ThemeData(fontFamily: "Nunito"),
+      home: const HomeScreen(),
     );
   }
 }
