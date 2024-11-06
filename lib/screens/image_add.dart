@@ -5,6 +5,9 @@ class ImageAdd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Tekrarlanan SizedBox widget'larını bir değişken olarak tanımlayın
+    const sizedBox = SizedBox(height: 20, width: 20);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Resim Ekleme - Image'),
@@ -12,50 +15,51 @@ class ImageAdd extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            //================================================================
-            const SizedBox(height: 20, width: 20),
-            // SizedBox: Boşluk ekler. (genişlik: width, yükseklik: height)
-            //================================================================
-            const Text(
-                "const Text('.....') Seklinde Text Widget olusturulabilir."),
-            //================================================================
-            const SizedBox(height: 20, width: 20),
-            //================================================================
-            Image.asset(
-              'assets/images/resim.jpg',
-              width: 250,
-              height: 450,
-            ),
-            //================================================================
-            const SizedBox(height: 10, width: 10),
-            //================================================================
-            Image.asset('assets/images/logo.png', width: 200, height: 200),
-            //================================================================
-            const SizedBox(height: 10, width: 10),
-            //================================================================
-            Image.network(
-              'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
-              width: 100,
-              height: 100,
-            ),
-            //================================================================
-            const SizedBox(height: 10, width: 10),
-            //================================================================
-            TextButton(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Boşluk ekler
+              sizedBox,
+              // Text widget
+              const Text(
+                  "const Text('.....') Şeklinde Text Widget oluşturulabilir."),
+              // Boşluk ekler
+              sizedBox,
+              // Asset image
+              Image.asset(
+                'assets/images/resim.jpg',
+                width: 250,
+                height: 450,
+              ),
+              // Boşluk ekler
+              const SizedBox(height: 10, width: 10),
+              // Asset image
+              Image.asset('assets/images/logo.png', width: 200, height: 200),
+              // Boşluk ekler
+              const SizedBox(height: 10, width: 10),
+              // Network image
+              Image.network(
+                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
+                width: 100,
+                height: 100,
+              ),
+              // Boşluk ekler
+              const SizedBox(height: 10, width: 10),
               // Text Button
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: TextButton.styleFrom(
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: TextButton.styleFrom(
                   backgroundColor: Colors.lightBlueAccent,
-                  foregroundColor: Colors.white),
-              child: const Text('Anasayfaya Dön'),
-            )
-          ],
+                  foregroundColor: Colors.white,
+                ),
+                child: const Text('Anasayfaya Dön'),
+              ),
+            ],
+          ),
         ),
       ),
     );
